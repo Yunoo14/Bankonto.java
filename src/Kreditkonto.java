@@ -1,7 +1,7 @@
 public class Kreditkonto extends Konto {
 
-    Kreditkonto(String kontoInhaber, String kontonummer, int bankleitzahl) {
-        super(kontoInhaber, kontonummer, bankleitzahl);
+    Kreditkonto(String kontoInhaber, String kontonummer, int bankleitzahl, String kontoArt) {
+        super(kontoInhaber, kontonummer, bankleitzahl, kontoArt);
     }
 
     @Override

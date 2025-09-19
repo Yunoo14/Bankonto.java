@@ -6,11 +6,14 @@ public class Konto {
     private float kontofuhrungsgebuhren;
     private float auszahlung;
     private float einzahlung;
+    private String kontoArt;
 
-    Konto(String kontoInhaber, String kontoArt, int bankleitzahl) {
+    Konto(String kontoInhaber, String kontonummer, int bankleitzahl, String kontoArt) {
         this.kontoInhaber = kontoInhaber;
         this.kontonummer = kontonummer;
         this.bankleitzahl = bankleitzahl;
+        this.kontonummer = kontonummer;
+        this.kontoArt = kontoArt;
     }
 
     public void Einzahlung(float amount) {
@@ -33,6 +36,10 @@ public class Konto {
         return kontostand;
     }
 
+    public String getKontonummer() {
+        return kontonummer;
+    }
+
     public float getBankleitzahl() {
         return bankleitzahl;
     }
@@ -50,11 +57,10 @@ public class Konto {
     @Override
     public String toString() {
         return ("-------Kontoauszug-------" + "\n" +
-                "Kontoinhaber: " +
-                kontoInhaber + "\n" +
-                "Kontoart: " +
-                "\n" + "Kontonummer: " +
-                "\n" + "Bankleitzahl: " + "\n" +
+                "Kontoinhaber: " + kontoInhaber + "\n" +
+                "Kontoart: " + kontoArt + "\n" +
+                "Kontonummer: " + kontonummer + "\n" +
+                "Bankleitzahl: " + bankleitzahl + "\n" +
                 "Kontostand: " + kontostand);
     }
 }
